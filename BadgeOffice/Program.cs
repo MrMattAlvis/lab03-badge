@@ -1,4 +1,6 @@
 ﻿//Part 1
+using System.Security;
+
 Random rng = new Random();
 
 System.Console.Write("Full name: ");
@@ -24,3 +26,35 @@ int locker = rng.Next(1,501);
 
 System.Console.WriteLine("Student ID: " + studentId);
 System.Console.WriteLine("Locker: " + locker);
+// I dont know wht .gitignore isn't working
+
+//Part 3
+
+Console.Write("Dorm X: ");
+double dormX = double.Parse(Console.ReadLine());
+
+Console.Write("Dorm Y: ");
+double dormY = double.Parse(Console.ReadLine());
+
+Console.Write("Class X: ");
+double classX = double.Parse(Console.ReadLine());
+
+Console.Write("Class Y: ");
+double classY = double.Parse(Console.ReadLine());
+
+Console.Write("Walking speed in feet per second: ");
+double speed = double.Parse(Console.ReadLine());
+
+double changeInX = classX - dormX;
+double changeInY = classY -dormY;
+
+double distance = Math.Sqrt(Math.Pow(changeInX,2) + (Math.Pow(changeInY,2)));
+
+double exactSeconds = distance / speed;
+double totalSeconds = (int) exactSeconds;
+
+double minutes = totalSeconds / 60;
+double remainingSeconds = totalSeconds % 60;
+
+System.Console.WriteLine("Distance: " + Math.Round(distance,1) + " feet");
+System.Console.WriteLine("Walk time: " + Math.Round(minutes,0) + " minutes " + remainingSeconds + " seconds");
