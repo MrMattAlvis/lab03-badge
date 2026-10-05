@@ -1,6 +1,12 @@
-﻿//Part 1
-using System.Security;
-
+﻿/*
+* Name: Matthew Alan Alvis
+* Course: CSCI 1250, Section 201
+* Assignment: Lab 03, The Badge Office
+* Date: October 4, 2026
+* Description: Builds a student badge from a name, two random assignments,
+* and the walking distance to a first class.
+*/
+//Part 1
 Random rng = new Random();
 
 System.Console.Write("Full name: ");
@@ -18,7 +24,7 @@ System.Console.WriteLine("Name on badge: " + nameOnBadge);
 System.Console.WriteLine("UserName: " + userName);
 System.Console.WriteLine("Initials: " + initials);
 System.Console.WriteLine("Letteres in last name: " + lastName.Length);
-
+System.Console.WriteLine(" ");
 //Part 2
 
 int studentId = rng.Next(100000,1000000);
@@ -26,6 +32,7 @@ int locker = rng.Next(1,501);
 
 System.Console.WriteLine("Student ID: " + studentId);
 System.Console.WriteLine("Locker: " + locker);
+System.Console.WriteLine(" ");
 // I dont know wht .gitignore isn't working
 
 //Part 3
@@ -56,5 +63,20 @@ double totalSeconds = (int) exactSeconds;
 double minutes = totalSeconds / 60;
 double remainingSeconds = totalSeconds % 60;
 
+System.Console.WriteLine(" ");
 System.Console.WriteLine("Distance: " + Math.Round(distance,1) + " feet");
 System.Console.WriteLine("Walk time: " + Math.Round(minutes,0) + " minutes " + remainingSeconds + " seconds");
+System.Console.WriteLine(" ");
+
+System.Console.WriteLine("==================================");
+System.Console.WriteLine("        ETSU STUDENT BADGE");
+System.Console.WriteLine("==================================");
+System.Console.WriteLine("NAME      " + fullName);
+System.Console.WriteLine("USERNAME  " + userName);
+System.Console.WriteLine("ID        " + studentId);
+System.Console.WriteLine("LOCKER    " + locker);
+System.Console.WriteLine("WALK      " + Math.Round(minutes,0) + " min " + remainingSeconds + " sec");
+System.Console.WriteLine("==================================");
+
+// Sorry I couldn't get the .gitignore work properly, I don'tknow what I did wrong their.
+//any feedback would be great. I feel like I got most of this down pat, but is their an area I should work to improve on.
